@@ -8,9 +8,14 @@ const apiClient = new APIClient<Platform>(
   '/platforms/lists/parents'
 );
 
+
 const usePlatforms = () =>
   useQuery({
     queryKey: ['platforms'],
+    // queryFn:() => 
+    //   apiClient
+    //   .get<FetchResponse<Platform>>('/platforms/lists/parents')
+    //   .then(res => res.data),
     queryFn: apiClient.getAll,
     staleTime: ms('24h'),
     initialData: platforms,
