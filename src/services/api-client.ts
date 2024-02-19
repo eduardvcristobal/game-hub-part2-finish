@@ -10,6 +10,7 @@ const axiosInstance = axios.create({
   baseURL: 'https://api.rawg.io/api',
   params: {
     key:'53d084c09e8a468fbc08b911a4bab930'
+    
     // key: 'e53bba19d7914970889f528d70c8e06d',
   },
 });
